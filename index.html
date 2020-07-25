@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+  <title>Formulario KAVAK</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-7 col-sm-offset-3">
+        <div id="answer" class="answer bg-primary text-center"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 col-sm-offset-3">
+        <form>
+            <!-- Nombre -->
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <div class="row">
+                <input id="cn" class="col-sm-10" name="name"  required  placeholder="Ingresa tu nombre"  pattern="[A-Za-z]{1,30}" maxlength="50" />
+                <span class="validity col-sm-2"></span>
+                </div>
+            </div>
+            <!-- Apellido -->
+            <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <div class="row">
+                <input class="col-sm-10" name="apellido" placeholder="Ingresa tu apellido"  required  pattern="[A-Za-z]{1,30}" maxlength="50"/>
+                <span class="validity col-sm-2"></span>
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <div class="row">
+                <input class="col-sm-10" name="email"  required  placeholder="Ingresa tu e-mail" maxlength="30" pattern="[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]{1,30}[@][A-Za-z0-9!#$%&'*+/=?^_`{|}~-]{1,30}[.][A-Za-z0-9!#$%&'*+/=?^_`{|}~-]{1,30}" />
+                <span class="validity col-sm-2"></span>
+                </div>
+            </div>
+            <!-- Pais -->
+            <div class="form-group">
+                <label for="pais">Pais</label>
+                <div class="row">
+                <select name="pais"  class="col-sm-10">
+                            <option>Selecciona un pais</option>
+                </select>
+                </div>
+            </div>
+            <!-- Género -->
+            <label for="gender">Género</label><br>
+            <div class="row" style ="display:flex">
+            <div class="col-sm-4">
+                <label for="male" >Masculino</label>
+                <input type="radio" id="male" name="gender" value="male" >
+                
+            </div>
+            <div class="col-sm-4">
+                <label for="female" >Femenino</label>
+                <input type="radio" id="male" name="female" value="female" >
+            </div>
+            <div class="col-sm-4">
+                <label for="Other" >Otro</label>
+                <input type="radio" id="Other" name="other" value="Other">
+            </div>
+        </div><br>
+        <!-- Teléfono -->
+        <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <div class="row">
+              <input class="col-sm-10" name="phone" pattern="[55]{2}[0-9]{8}"  title="phone"  required  maxlength="10" />
+              <span class="validity col-sm-2"></span>
+            </div>
+          </div>
+        <!-- Botón de enviar -->
+        <input class="submit" type="submit" value="Enviar" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
